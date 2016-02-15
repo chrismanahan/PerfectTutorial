@@ -1,0 +1,71 @@
+LogManager.swift
+	public class LogManager
+Closeable.swift
+	public protocol Closeable
+	func close()
+	func doWithClose(c: ()->())
+	public protocol Closeable
+	public func doWithClose(c: ()->())
+NetNamedPipe.swift
+	public override func sockName() -> (String, UInt16)
+	public override func peerName() -> (String, UInt16)
+WebSocketHandler.swift
+	case Continuation = 0x0, Text = 0x1, Binary = 0x2, Close = 0x8, Ping = 0x9, Pong = 0xA, Invalid
+	case Continuation = 0x0, Text = 0x1, Binary = 0x2, Close = 0x8, Ping = 0x9, Pong = 0xA, Invalid
+	case Continuation = 0x0, Text = 0x1, Binary = 0x2, Close = 0x8, Ping = 0x9, Pong = 0xA, Invalid
+	case Continuation = 0x0, Text = 0x1, Binary = 0x2, Close = 0x8, Ping = 0x9, Pong = 0xA, Invalid
+	case Continuation = 0x0, Text = 0x1, Binary = 0x2, Close = 0x8, Ping = 0x9, Pong = 0xA, Invalid
+	case Continuation = 0x0, Text = 0x1, Binary = 0x2, Close = 0x8, Ping = 0x9, Pong = 0xA, Invalid
+	case Continuation = 0x0, Text = 0x1, Binary = 0x2, Close = 0x8, Ping = 0x9, Pong = 0xA, Invalid
+	public init(handlerProducer: HandlerProducer)
+	public func handleRequest(request: WebRequest, response: WebResponse)
+PageHandler.swift
+	public static func addRequestHandler(generator: RequestHandlerGenerator)
+	public protocol RequestHandler
+	func handleRequest(request: WebRequest, response: WebResponse)
+Utilities.swift
+	public var stringByDecodingURL: String?
+	public func stringByReplacingString(find: String, withString: String) -> String
+	public func substringTo(index: String.Index) -> String
+	public func substringWith(range: Range<String.Index>) -> String
+	public func rangeOf(string: String, ignoreCase: Bool = false) -> Range<String.Index>?
+	public func contains(string: String) -> Bool
+NetTCP.swift
+	public func sockName() -> (String, UInt16)
+	public func peerName() -> (String, UInt16)
+StaticFileHandler.swift
+	public class StaticFileHandler: RequestHandler
+	public init() {}
+	public func handleRequest(request: WebRequest, response: WebResponse)
+WebRequest.swift
+	public class WebRequest
+NetTCPSSL.swift
+	public class NetTCPSSL : NetTCP
+	public class X509
+	public var publicKeyBytes: [UInt8]
+	public var keyFilePassword: String = ""
+	public var peerCertificate: X509?
+	public var usingSSL: Bool
+	public override init()
+	override public func initSocket()
+	public func errorCode() -> UInt
+	public func sslErrorCode(resultCode: Int32) -> Int32
+	public func errorStr(errorCode: Int32) -> String
+	public func reasonErrorStr(errorCode: Int32) -> String
+	public override func close()
+	public func beginSSL(closure: (Bool) -> ())
+	public func beginSSL(timeout: Double, closure: (Bool) -> ())
+	public func endSSL()
+	public func shutdown()
+	public func setConnectState()
+	public func setAcceptState()
+	public func setDefaultVerifyPaths() -> Bool
+	public func setVerifyLocations(caFilePath: String, caDirPath: String) -> Bool
+	public func useCertificateChainFile(cert: String) -> Bool
+	public func usePrivateKeyFile(cert: String) -> Bool
+	override public func forEachAccept(callBack: (NetTCP?) -> ())
+	override public func accept(timeoutSeconds: Double, callBack: (NetTCP?) -> ()) throws
+WebResponse.swift
+	public var requestCompletedCallback: () -> () = {}
+	public func appendBodyBytes(bytes: [UInt8])
+	public func appendBodyString(string: String)
