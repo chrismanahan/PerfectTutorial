@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9BCBD2FF1C72341600906FA7"
-               BuildableName = "Perfect Web Service.app"
-               BlueprintName = "Perfect Web Service"
+               BlueprintIdentifier = "9BCBD3261C723E0500906FA7"
+               BuildableName = "PerfectWebServiceServer.framework"
+               BlueprintName = "PerfectWebServiceServer"
                ReferencedContainer = "container:Perfect Web Service.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9BCBD2FF1C72341600906FA7"
-            BuildableName = "Perfect Web Service.app"
-            BlueprintName = "Perfect Web Service"
-            ReferencedContainer = "container:Perfect Web Service.xcodeproj">
+            BlueprintIdentifier = "F88B06801BDD48DD001FD0CD"
+            BuildableName = "PerfectServer HTTP.app"
+            BlueprintName = "PerfectServer HTTP App"
+            ReferencedContainer = "container:../../Modules/Perfect-master/PerfectServer/PerfectServer.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9BCBD2FF1C72341600906FA7"
-            BuildableName = "Perfect Web Service.app"
-            BlueprintName = "Perfect Web Service"
-            ReferencedContainer = "container:Perfect Web Service.xcodeproj">
+            BlueprintIdentifier = "F88B06801BDD48DD001FD0CD"
+            BuildableName = "PerfectServer HTTP.app"
+            BlueprintName = "PerfectServer HTTP App"
+            ReferencedContainer = "container:../../Modules/Perfect-master/PerfectServer/PerfectServer.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -70,16 +70,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9BCBD2FF1C72341600906FA7"
-            BuildableName = "Perfect Web Service.app"
-            BlueprintName = "Perfect Web Service"
+            BlueprintIdentifier = "9BCBD3261C723E0500906FA7"
+            BuildableName = "PerfectWebServiceServer.framework"
+            BlueprintName = "PerfectWebServiceServer"
             ReferencedContainer = "container:Perfect Web Service.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

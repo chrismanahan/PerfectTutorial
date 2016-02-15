@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Perfect_Web_Service" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,59 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Jsp-f7-6lT">
+                                <rect key="frame" x="20" y="20" width="560" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Mhd-i0-Y2Y"/>
+                                </constraints>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tft-IS-YZE">
+                                <rect key="frame" x="20" y="550" width="506" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="500" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R43-Q3-iEZ">
+                                <rect key="frame" x="540" y="550" width="35" height="30"/>
+                                <state key="normal" title="Post!"/>
+                                <connections>
+                                    <action selector="sendPost:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KvW-lN-Epf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="500" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deL-fK-p32">
+                                <rect key="frame" x="268" y="223" width="66" height="30"/>
+                                <state key="normal" title="New Post"/>
+                                <connections>
+                                    <action selector="getPost:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tsM-k4-rfq"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="deL-fK-p32" firstAttribute="centerX" secondItem="Jsp-f7-6lT" secondAttribute="centerX" id="2Kq-wZ-Tdn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jsp-f7-6lT" secondAttribute="trailing" id="4hL-lQ-6yz"/>
+                            <constraint firstItem="Tft-IS-YZE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="5dc-Dd-cN6"/>
+                            <constraint firstItem="Jsp-f7-6lT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="7wS-W2-wVf"/>
+                            <constraint firstItem="R43-Q3-iEZ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Az8-Y6-Z7P"/>
+                            <constraint firstItem="R43-Q3-iEZ" firstAttribute="leading" secondItem="Tft-IS-YZE" secondAttribute="trailing" constant="8" id="CCS-5X-Py0"/>
+                            <constraint firstItem="deL-fK-p32" firstAttribute="top" secondItem="Jsp-f7-6lT" secondAttribute="bottom" constant="3" id="I3j-iW-ryo"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="R43-Q3-iEZ" secondAttribute="bottom" constant="20" id="OpF-HL-gGK"/>
+                            <constraint firstItem="Jsp-f7-6lT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="PXS-W7-Ags"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Tft-IS-YZE" secondAttribute="bottom" constant="20" id="lZs-0p-A49"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="inputTextField" destination="Tft-IS-YZE" id="1E8-SO-2d7"/>
+                        <outlet property="outputTextview" destination="Jsp-f7-6lT" id="X7T-uh-PGF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="671" y="412"/>
         </scene>
     </scenes>
 </document>
